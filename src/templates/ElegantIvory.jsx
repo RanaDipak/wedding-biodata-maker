@@ -27,13 +27,13 @@ export default function ElegantIvory({ data, order, photo, symbol }) {
         <div className="flex gap-5 items-start">
           <div className="flex-1 min-w-0">
             <SectionHeader title="Personal Details" color="#5a3a14" accent="#7a5a1a" />
-            <div className="grid grid-cols-2 gap-x-5">
+            <div className="grid grid-cols-2 gap-x-8">
               <div><RenderFields order={pL} catalog={FIELD_CATALOG} data={data} dense /></div>
               <div><RenderFields order={pR} catalog={FIELD_CATALOG} data={data} dense /></div>
             </div>
           </div>
           {photo && (
-            <div className="w-[150px] shrink-0">
+            <div className="w-[140px] shrink-0">
               <div className="border-2 p-1 bg-white" style={{ borderColor: '#7a5a1a' }}>
                 <div className="photo-frame"><img src={photo} alt="" /></div>
               </div>
@@ -44,7 +44,7 @@ export default function ElegantIvory({ data, order, photo, symbol }) {
           )}
         </div>
         <SectionHeader title="Family Details" color="#5a3a14" accent="#7a5a1a" />
-        <div className="grid grid-cols-2 gap-x-5">
+        <div className="grid grid-cols-2 gap-x-8">
           <div><RenderFields order={fL} catalog={FAMILY_CATALOG} data={data} dense /></div>
           <div><RenderFields order={fR} catalog={FAMILY_CATALOG} data={data} dense /></div>
         </div>

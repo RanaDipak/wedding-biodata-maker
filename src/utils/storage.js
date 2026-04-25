@@ -5,7 +5,8 @@ export function loadState() {
     const raw = localStorage.getItem(KEY)
     if (!raw) return null
     return JSON.parse(raw)
-  } catch {
+  } catch (error) {
+    console.error('Error loading state from localStorage:', error)
     return null
   }
 }
@@ -13,5 +14,7 @@ export function loadState() {
 export function saveState(state) {
   try {
     localStorage.setItem(KEY, JSON.stringify(state))
-  } catch {}
+  } catch (error) {
+    console.error('Error saving state to localStorage:', error)
+  }
 }

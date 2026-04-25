@@ -20,7 +20,7 @@ export default function FloralPink({ data, order, photo, symbol }) {
         </div>
         <div className="flex gap-5 items-start mt-1">
           {photo && (
-            <div className="w-[150px] shrink-0">
+            <div className="w-[140px] shrink-0">
               <div className="p-[3px] rounded-full" style={{ background: 'linear-gradient(135deg,#f7c8d8,#c54683)' }}>
                 <div className="bg-white p-1 rounded-full">
                   <div className="photo-frame rounded-full"><img src={photo} alt="" className="rounded-full" /></div>
@@ -33,14 +33,14 @@ export default function FloralPink({ data, order, photo, symbol }) {
           )}
           <div className="flex-1 min-w-0">
             <SectionHeader title="Personal Details" color="#9d174d" accent="#c54683" />
-            <div className="grid grid-cols-2 gap-x-5">
+            <div className="grid grid-cols-2 gap-x-8">
               <div><RenderFields order={pL} catalog={FIELD_CATALOG} data={data} dense /></div>
               <div><RenderFields order={pR} catalog={FIELD_CATALOG} data={data} dense /></div>
             </div>
           </div>
         </div>
         <SectionHeader title="Family Details" color="#9d174d" accent="#c54683" />
-        <div className="grid grid-cols-2 gap-x-5">
+        <div className="grid grid-cols-2 gap-x-8">
           <div><RenderFields order={fL} catalog={FAMILY_CATALOG} data={data} dense /></div>
           <div><RenderFields order={fR} catalog={FAMILY_CATALOG} data={data} dense /></div>
         </div>

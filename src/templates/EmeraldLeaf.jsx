@@ -25,7 +25,7 @@ export default function EmeraldLeaf({ data, order, photo, symbol }) {
         </div>
         <div className="flex gap-5 items-start">
           {photo && (
-            <div className="w-[150px] shrink-0">
+            <div className="w-[140px] shrink-0">
               <div className="border-4 p-1 bg-white shadow-md" style={{ borderColor: '#047857' }}>
                 <div className="photo-frame"><img src={photo} alt="" /></div>
               </div>
@@ -36,14 +36,14 @@ export default function EmeraldLeaf({ data, order, photo, symbol }) {
           )}
           <div className="flex-1 min-w-0">
             <SectionHeader title="Personal Details" color="#065f46" accent="#10b981" />
-            <div className="grid grid-cols-2 gap-x-5">
+            <div className="grid grid-cols-2 gap-x-8">
               <div><RenderFields order={pL} catalog={FIELD_CATALOG} data={data} dense /></div>
               <div><RenderFields order={pR} catalog={FIELD_CATALOG} data={data} dense /></div>
             </div>
           </div>
         </div>
         <SectionHeader title="Family Details" color="#065f46" accent="#10b981" />
-        <div className="grid grid-cols-2 gap-x-5">
+        <div className="grid grid-cols-2 gap-x-8">
           <div><RenderFields order={fL} catalog={FAMILY_CATALOG} data={data} dense /></div>
           <div><RenderFields order={fR} catalog={FAMILY_CATALOG} data={data} dense /></div>
         </div>

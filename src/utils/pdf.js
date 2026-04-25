@@ -4,23 +4,34 @@ import jsPDF from 'jspdf'
 const A4_MM = { w: 210, h: 297 }
 
 const PRINT_STYLE = `
-  * {
+  .biodata-page * {
     -webkit-font-smoothing: antialiased;
     text-rendering: geometricPrecision;
-    word-spacing: 0.06em !important;
-    letter-spacing: normal !important;
-    font-feature-settings: "kern" 0, "liga" 0, "calt" 0 !important;
-    font-kerning: none !important;
+    font-kerning: none;
   }
-  .biodata-page, .biodata-page * {
-    font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif !important;
+  .biodata-page .row-kv {
+    display: flex !important;
+    align-items: baseline !important;
+    word-spacing: 0.04em;
   }
-  .row-kv .k, .row-kv .v, .label, .input, body, button, summary {
-    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif !important;
+  .biodata-page .row-kv .k {
+    flex: 0 0 110px !important;
+    width: 110px !important;
+  }
+  .biodata-page .row-kv-dense .k {
+    flex: 0 0 95px !important;
+    width: 95px !important;
+  }
+  .biodata-page .row-kv .v {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
   }
   .biodata-page h1, .biodata-page h2, .biodata-page h3,
-  .biodata-page .font-serif, .biodata-page .font-script {
+  .biodata-page .font-serif {
     font-family: 'Playfair Display', 'Georgia', serif !important;
+  }
+  .biodata-page .row-kv .k, .biodata-page .row-kv .v {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif !important;
   }
   img { image-rendering: -webkit-optimize-contrast; }
 `

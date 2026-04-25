@@ -28,16 +28,16 @@ export default function ClassicGold({ data, order, photo, symbol }) {
           <DividerOrnament color="#b8860b" width={220} />
         </div>
 
-        <div className="flex gap-5 items-start">
+        <div className="flex gap-7 items-start">
           <div className="flex-1 min-w-0">
             <SectionHeader title="Personal Details" />
-            <div className="grid grid-cols-2 gap-x-6">
+            <div className="grid grid-cols-2 gap-x-8">
               <div><RenderFields order={pL} catalog={FIELD_CATALOG} data={data} dense /></div>
               <div><RenderFields order={pR} catalog={FIELD_CATALOG} data={data} dense /></div>
             </div>
           </div>
           {photo && (
-            <div className="w-[170px] shrink-0">
+            <div className="w-[140px] shrink-0">
               <div
                 className="p-[3px] rounded-sm"
                 style={{ background: 'linear-gradient(135deg,#f4cf6e,#b8860b 50%,#f4cf6e)' }}
@@ -61,7 +61,7 @@ export default function ClassicGold({ data, order, photo, symbol }) {
         </div>
 
         <SectionHeader title="Family Details" />
-        <div className="grid grid-cols-2 gap-x-6">
+        <div className="grid grid-cols-2 gap-x-8">
           <div><RenderFields order={fL} catalog={FAMILY_CATALOG} data={data} dense /></div>
           <div><RenderFields order={fR} catalog={FAMILY_CATALOG} data={data} dense /></div>
         </div>
