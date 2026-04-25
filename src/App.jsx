@@ -58,6 +58,14 @@ export default function App() {
   const [fullPreview, setFullPreview] = useState(false)
   const previewRef = useRef(null)
 
+  // Hide loading screen when app mounts
+  useEffect(() => {
+    const loading = document.getElementById('loading')
+    if (loading) {
+      loading.classList.add('hidden')
+    }
+  }, [])
+
   useEffect(() => { saveState(state) }, [state])
 
   const Template = useMemo(
