@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: #efe4d2;
+  color: #1f2937;
+}
+
+@media print {
+  .no-print { display: none !important; }
+  @page { size: A4; margin: 0; }
+}
+
+.biodata-page {
+  width: 794px;
+  min-height: 1123px;
+  background: white;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  word-spacing: 0.05em;
+}
+
+.input {
+  @apply w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-saffron/40 focus:border-saffron bg-white;
+}
+
+.label {
+  @apply block text-[11px] font-semibold text-gray-600 mb-1 uppercase tracking-wide;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md font-semibold text-sm transition disabled:opacity-60 disabled:cursor-not-allowed;
+}
+
+.btn-primary {
+  @apply btn bg-gradient-to-r from-saffron to-orange-500 text-white hover:from-orange-500 hover:to-orange-600 shadow-sm;
+}
+
+.btn-ghost {
+  @apply btn bg-white border border-gray-300 text-gray-700 hover:bg-gray-50;
+}
+
+.btn-maroon {
+  @apply btn bg-gradient-to-r from-maroon to-red-800 text-white hover:from-red-800 hover:to-red-900;
+}
+
+.section-title {
+  @apply text-sm font-bold text-maroon uppercase tracking-wider mt-4 mb-2 border-b border-gold/40 pb-1;
+}
+
+.row-kv {
+  display: grid;
+  grid-template-columns: 44% 56%;
+  font-size: 14px;
+  line-height: 1.7;
+  padding: 5px 0;
+  border-bottom: 1px dotted rgba(184,134,11,0.4);
+  page-break-inside: avoid;
+  word-spacing: 0.08em;
+  letter-spacing: 0.015em;
+}
+.row-kv .k {
+  font-weight: 600;
+  color: #3f2f15;
+  padding-right: 10px;
+  letter-spacing: 0.025em;
+}
+.row-kv .v {
+  color: #1c1917;
+  word-break: break-word;
+  position: relative;
+  padding-left: 14px;
+  letter-spacing: 0.015em;
+}
+.row-kv .v::before {
+  content: ":";
+  position: absolute;
+  left: 0;
+  color: #92744a;
+  font-weight: 600;
+}
+
+.row-kv-dense {
+  font-size: 13px;
+  padding: 4px 0;
+  line-height: 1.6;
+}
+
+.preview-scroll {
+  max-height: calc(100vh - 140px);
+  overflow: auto;
+}
+
+.preview-scale-wrap {
+  transform-origin: top center;
+}
+
+.photo-frame {
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
